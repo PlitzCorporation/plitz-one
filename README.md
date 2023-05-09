@@ -73,4 +73,4 @@ check file `commitlint.config.js` and make sure you understand to use this CMC r
 
 ## Credits that we feature and we recommend your support
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/next-ts-css-and-material-ui-boilerplate)](https://github.com/PlitzCorporation/plitz-one/stargazers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/next-ts-css-and-material-ui-boilerplate)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
