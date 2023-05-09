@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    dirs: ['src'],
+    dirs: ['components', 'styles', 'lib', 'pages'],
   },
 
   reactStrictMode: true,

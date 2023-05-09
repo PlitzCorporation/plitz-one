@@ -1,14 +1,12 @@
 # Description & Technical Solution
 
-Describe problems, if any, clearly and concisely.
-Summarize the impact to the system.
-Please also include relevant motivation and context.
-Please include a summary of the technical solution and how it solves the problem.
+Please explain what was done in this PR and why. If you have a ticket, please make sure to add a link to it.
 
 # Checklist
 
 - [ ] I have commented my code, particularly in hard-to-understand areas.
 - [ ] Already rebased against main branch.
+- [ ] I tested my code locally and made sure nothing is broken.
 
 # Screenshots
 

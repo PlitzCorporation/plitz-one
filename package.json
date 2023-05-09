@@ -1,5 +1,5 @@
 {
-  "name": "ts-nextjs-tailwind-starter",
+  "name": "next-ts-css-and-material-ui-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,18 +18,19 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.12.3",
     "clsx": "^1.2.1",
     "next": "^13.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "tailwind-merge": "^1.12.0"
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@svgr/webpack": "^6.5.1",
-    "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.2.5",
@@ -48,8 +49,6 @@
     "next-sitemap": "^2.5.28",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.3.2",
     "typescript": "^4.9.5"
   },
   "lint-staged": {

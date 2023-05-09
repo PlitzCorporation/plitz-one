@@ -20,7 +20,7 @@ const customJestConfig = {
    * Absolute imports and Module Path Aliases
    */
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@components/(.*)$': '<rootDir>/components/$1',
     '^~/(.*)$': '<rootDir>/public/$1',
   },
 };

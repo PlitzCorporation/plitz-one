@@ -49,11 +49,11 @@ module.exports = {
           // {s}css files
           ['^.+\\.s?css$'],
           // Lib and hooks
-          ['^@/lib', '^@/hooks'],
+          ['^@lib', '^@/hooks'],
           // static data
           ['^@/data'],
           // components
-          ['^@/components', '^@/container'],
+          ['^@components', '^@/container'],
           // zustand store
           ['^@/store'],
           // Other imports

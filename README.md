@@ -1,122 +1,76 @@
-# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+# Next, TypeScript, Material UI and CSS Boilerplate
 
 <div align="center">
-  <h2>🔋 ts-nextjs-tailwind-starter</h2>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
-
-[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
-[![Depfu](https://badges.depfu.com/badges/fc6e730632ab9dacaf7df478a08684a7/overview.svg)](https://depfu.com/github/theodorusclarence/ts-nextjs-tailwind-starter?project_id=30160)
-[![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
-
+  <h2>Plitz One - The beginning of every project</h2>
+  <p>Next, TypeScript, Material UI and CSS Boilerplate packed with useful development features.</p>
+  <p>Created by <a href="https://plitzinc.com">Norman Plietez @ Plitz7</a></p>
 </div>
 
 ## Features
 
-This repository is 🔋 battery packed with:
+Repository Main Features:
 
-- ⚡️ Next.js 13
-- ⚛️ React 18
-- ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
-- 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
-- 🃏 Jest — Configured for unit testing
-- 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
-- 💖 Prettier — Format your code consistently
-- 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
-- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
-- 👷 Github Actions — Lint your code on PR
-- 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
-- 🔥 Snippets — A collection of useful snippets
-- 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
-- 🗺 Site Map — Automatically generate sitemap.xml
-- 📦 Expansion Pack — Easily install common libraries, additional components, and configs
-
-See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
-
-You can also check all of the **details and demos** on my blog post:
-
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
+- Built with Next.JS 13
+- React 18
+- TypeScript
+- We are using CSS Modules and Material UI for styling
+- Import using `@componen/`, `@pages`, `@lib` and `@styles` prefix
+- ESLint
+- Husky & Lint Staged
+- Github Actions
+- Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
+- Site Map — Automatically generate sitemap.xml
 
 ## Getting Started
 
 ### 1. Clone this template using one of the three ways:
 
-1. Use this repository as template
+1. Using `create-next-app`
 
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
-
-   I'll appreciate if you do, so this template can be known by others too 😄
-
-   ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
+   ```
+   npx create-next-app -e https://github.com/PlitzCorporation/plitz-one project-name
    ```
 
-3. Using `degit`
+2. Regular Clonning `git clone`
 
-   ```bash
-   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
    ```
-
-4. Deploy to Vercel
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
+   git clone https://github.com/PlitzCorporation/plitz-one
+   ```
 
 ### 2. Install dependencies
 
-It is encouraged to use **yarn** so the husky hooks can work properly.
+Works better with yarn.
 
-```bash
+```
 yarn install
 ```
+
+If you preffer npm make sure you know what you are doing before preceeding.
 
 ### 3. Run the development server
 
 You can start the server using this command:
 
-```bash
+```
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `pages/index.tsx`.
 
-### 4. Change defaults
-
-There are some things you need to change including title, urls, favicons, etc.
-
-Find all comments with !STARTERCONF, then follow the guide.
-
-Don't forget to change the package name in package.json
-
-### 5. Commit Message Convention
+### 4. Commit Message Convention
 
 This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
 
-## Projects using ts-nextjs-tailwind-starter
+```
+<type>[optional scope]: <description>
 
-<!--
-TEMPLATE
-- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
-- [sitename](https://sitelink.com)
--->
+[optional body]
 
-- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
-- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
+[optional footer(s)]
+```
 
-Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
+check file `commitlint.config.js` and make sure you understand to use this CMC rules properly.
 
-## Expansion Pack 📦
+## Credits that we feature and we recommend your support
 
-This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
-
-You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
-
-https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
-
-Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
+[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/next-ts-css-and-material-ui-boilerplate)](https://github.com/PlitzCorporation/plitz-one/stargazers)
