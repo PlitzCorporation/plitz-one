@@ -1,29 +1,34 @@
-import * as React from 'react';
-import { RiAlarmWarningFill } from 'react-icons/ri';
+import Link from "next/link";
+import { Fragment } from "react";
+// Icons
+import { RiAlarmWarningFill } from "react-icons/ri";
 
-import Layout from '@components/layout/Layout';
-import ArrowLink from '@components/links/ArrowLink';
-import Seo from '@components/Seo';
+import singlePage from "@styles/globalModules/singlePage.module.css";
+
+// Components
+import Seo from "@components/Seo";
 
 export default function NotFoundPage() {
   return (
-    <Layout>
-      <Seo templateTitle='Not Found' />
+    <Fragment>
+      <Seo templateTitle="Not Found" />
 
-      <main>
-        <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
-            <RiAlarmWarningFill
-              size={60}
-              className='drop-shadow-glow animate-flicker text-red-500'
-            />
-            <h1 className='mt-8 text-4xl md:text-6xl'>Page Not Found</h1>
-            <ArrowLink className='mt-4 md:text-lg' href='/'>
+      <section>
+        <div className={singlePage.wrapperUnderConstruction}>
+          <RiAlarmWarningFill size={60} />
+          <h1 className={singlePage.pageTitle}>404</h1>
+          <h3>Page Not Found</h3>
+          <p>
+            Ooops, it's now you, it is us. The page you are looking for doesn't
+            exists or has been removed.
+          </p>
+          <div className={singlePage.spButtonsWrapper}>
+            <Link href="/" className="secondary-button">
               Back to Home
-            </ArrowLink>
+            </Link>
           </div>
-        </section>
-      </main>
-    </Layout>
+        </div>
+      </section>
+    </Fragment>
   );
 }

@@ -1,70 +1,42 @@
-import * as React from 'react';
+import * as React from "react";
 
-import Layout from '@components/layout/Layout';
-import ArrowLink from '@components/links/ArrowLink';
-import ButtonLink from '@components/links/ButtonLink';
-import UnderlineLink from '@components/links/UnderlineLink';
-import UnstyledLink from '@components/links/UnstyledLink';
-import Seo from '@components/Seo';
+import singlePage from "@styles/globalModules/singlePage.module.css";
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
-import Vercel from '~/svg/Plitz7.svg';
+// Parts
+import Seo from "@components/Seo";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
-    <Layout>
-      {/* <Seo templateTitle='Home' /> */}
+    <>
       <Seo />
 
-      <main>
-        <section className='bg-white'>
-          <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-            <Vercel className='text-5xl' />
-            <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
-            </h1>
-            <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
-            </p>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/next-ts-css-and-material-ui-boilerplate'>
-                See the repository
-              </ArrowLink>
-            </p>
+      <section>
+        <div className={singlePage.wrapperUnderConstruction}>
+          <h1 className={singlePage.pageTitle}>
+            NEXT.js + TypeScript + Material UI Starting Pack
+          </h1>
+          <h2 className={singlePage.subTitle}>A Boilerplate by Plitz7</h2>
+          <p>
+            A starter for NEXT.js, Material UI, and TypeScript with Absolute
+            Import, Seo, Link component, pre-configured with Husky. This
+            boilerplate has been created by the Plitz7 team.
+          </p>
+          <div className={singlePage.spButtonsWrapper}>
+            <a className="primary-button" href="https://plitz7.com">
+              Plitz7
+            </a>
 
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
-
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fnext-ts-css-and-material-ui-boilerplate'
-              className='mt-4'
+            <a
+              className="outlined-button"
+              href="https://github.com/PlitzCorporation"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
-
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://plitzinc.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
+              GitHub Page
+            </a>
           </div>
-        </section>
-      </main>
-    </Layout>
+        </div>
+      </section>
+    </>
   );
-}
+};
+
+export default HomePage;

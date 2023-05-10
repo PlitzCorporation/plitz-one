@@ -1,0 +1,227 @@
+/* Main CSS by Norman Pleitez @ Plitz7 */
+:root {
+  --primary: #0b093a;
+  --secondary: #021f59;
+  --ternary: #024059;
+  --accentgreen: #00ff62;
+  --accent: #03a6a6;
+  --plata: #e6e6e6;
+  --primaryfont: "Montserrat", sans-serif;
+  --secondaryfont: "Poppins", sans-serif;
+}
+
+/* ===================================
+  1. Global CSS
+====================================== */
+
+* {
+  color: inherit;
+  outline: #fff solid 0;
+}
+
+:focus {
+  outline: #fff solid 0;
+}
+
+#__next {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--secondaryfont);
+  font-weight: 300;
+  color: var(--plata);
+  background-color: var(--primary);
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: var(--accentgreen);
+  transition: color 0.2s ease;
+}
+
+body a:hover,
+body a:focus {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+header {
+  padding: 20px 0;
+  border-bottom: 0.5px solid var(--ternary);
+}
+
+main {
+  background-color: var(--primary);
+}
+
+section {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+footer {
+  padding: 7rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primaryfont);
+  margin: 0 0 30px 0;
+  padding: 0;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 4.375rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.625rem;
+}
+
+h4 {
+  font-size: 3.25rem;
+}
+
+h5 {
+  font-size: 2.875rem;
+}
+
+h6 {
+  font-size: 2.5rem;
+}
+
+p,
+span {
+  font-family: var(--secondaryfont);
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-button {
+  background-color: var(--accentgreen);
+  color: var(--primary);
+  font-family: var(--primaryfont);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 0.7rem 3em;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-out;
+}
+
+.secondary-button {
+  background-color: var(--accent);
+  color: var(--secondary);
+  font-family: var(--primaryfont);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 0.7rem 3em;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-out;
+}
+
+.outlined-button {
+  background-color: transparent;
+  color: var(--plata);
+  font-family: var(--primaryfont);
+  font-weight: 300;
+  text-transform: uppercase;
+  border: 1px solid var(--plata);
+  border-radius: 30px;
+  padding: 0.7rem 3em;
+  transition: all 0.3s ease-out;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.outlined-button:hover {
+  background-color: #fff;
+  border: 1px solid var(--plata);
+  color: var(--ternary);
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  transition: all 0.1s ease-in;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 3.25rem;
+  }
+
+  h4 {
+    font-size: 2.875rem;
+  }
+
+  h5 {
+    font-size: 2.5rem;
+  }
+
+  h6 {
+    font-size: 2.125rem;
+  }
+
+  p,
+  span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3.45rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.875rem;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 2.125rem;
+  }
+
+  h6 {
+    font-size: 1.8rem;
+  }
+
+  p,
+  span {
+    font-size: 0.875rem;
+  }
+}
