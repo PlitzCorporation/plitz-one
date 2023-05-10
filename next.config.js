@@ -10,7 +10,7 @@ const nextConfig = {
   // Uncoment to add domain whitelist
   // images: {
   //   domains: [
-  //     'res.cloudinary.com',
+  //     'thedavid.plitz7.com',
   //   ],
   // },
 

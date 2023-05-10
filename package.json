@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src --fix && yarn format",
-    "lint:strict": "eslint --max-warnings=0 src",
+    "lint:fix": "eslint --dir components pages styles lib --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 --dir components pages styles lib",
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
     "test": "jest",
@@ -53,11 +53,19 @@
     "typescript": "^4.9.5"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
+    "components/**/*.{js,jsx,ts,tsx,css}": [
+      "eslint --max-warnings 0",
       "prettier -w"
     ],
-    "**/*.{json,css,scss,md,webmanifest}": [
+    "pages/**/*.{js,jsx,ts,tsx,css}": [
+      "eslint --max-warnings 0",
+      "prettier -w"
+    ],
+    "lib/**/*.{js,jsx,ts,tsx,css}": [
+      "eslint --max-warnings 0",
+      "prettier -w"
+    ],
+    "styles/**/*.{json,css,scss,md,webmanifest}": [
       "prettier -w"
     ]
   }

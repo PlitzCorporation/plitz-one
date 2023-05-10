@@ -1,13 +1,14 @@
-import * as React from "react";
+import { Fragment } from 'react';
 
-import singlePage from "@styles/globalModules/singlePage.module.css";
+// Styling
+import singlePage from '@styles/globalModules/singlePage.module.css';
 
 // Parts
-import Seo from "@components/Seo";
+import Seo from '@components/Seo';
 
 const HomePage = () => {
   return (
-    <>
+    <Fragment>
       <Seo />
 
       <section>
@@ -23,20 +24,20 @@ const HomePage = () => {
             convenience.
           </p>
           <div className={singlePage.spButtonsWrapper}>
-            <a className="primary-button" href="https://plitz7.com">
+            <a className='primary-button' href='https://plitz7.com'>
               Plitz7
             </a>
 
             <a
-              className="outlined-button"
-              href="https://github.com/PlitzCorporation"
+              className='outlined-button'
+              href='https://github.com/PlitzCorporation'
             >
               GitHub Page
             </a>
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 
