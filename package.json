@@ -53,19 +53,19 @@
     "typescript": "^4.9.5"
   },
   "lint-staged": {
-    "components/**/*.{js,jsx,ts,tsx,css}": [
+    "components/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0",
       "prettier -w"
     ],
-    "pages/**/*.{js,jsx,ts,tsx,css}": [
+    "pages/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0",
       "prettier -w"
     ],
-    "lib/**/*.{js,jsx,ts,tsx,css}": [
+    "lib/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0",
       "prettier -w"
     ],
-    "styles/**/*.{json,css,scss,md,webmanifest}": [
+    "**/*.{json,css,scss,md,webmanifest}": [
       "prettier -w"
     ]
   }
