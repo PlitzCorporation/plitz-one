@@ -19,7 +19,8 @@ const HomePage = () => {
           <p>
             A starter for NEXT.js, Material UI, and TypeScript with Absolute
             Import, Seo, Link component, pre-configured with Husky. This
-            boilerplate has been created by the Plitz7 team.
+            boilerplate has been created by the Plitz7 team for your initial dev
+            convenience.
           </p>
           <div className={singlePage.spButtonsWrapper}>
             <a className="primary-button" href="https://plitz7.com">

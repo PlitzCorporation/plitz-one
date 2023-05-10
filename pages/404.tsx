@@ -19,7 +19,7 @@ export default function NotFoundPage() {
           <h1 className={singlePage.pageTitle}>404</h1>
           <h3>Page Not Found</h3>
           <p>
-            Ooops, it's now you, it is us. The page you are looking for doesn't
+            Ooops, it's not you, it's us. The page you are looking for doesn't
             exists or has been removed.
           </p>
           <div className={singlePage.spButtonsWrapper}>
