@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 // Styling
-import hfStyle from "@styles/globalModules/fh.module.css";
+import hfStyle from '@styles/globalModules/fh.module.css';
 
 const FooterController = () => {
   return (
@@ -9,8 +9,8 @@ const FooterController = () => {
       <div className={`${hfStyle.copyrightbar}`}>
         © {new Date().getFullYear()} | Site created by
         <a
-          href="https://plitzinc.com?ref=plitzone"
-          target="_blank"
+          href='https://plitzinc.com?ref=plitzone'
+          target='_blank'
           className={hfStyle.crlink}
         >
           Plitz7, a Plitz Corporation brand
