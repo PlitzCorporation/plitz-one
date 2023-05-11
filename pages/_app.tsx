@@ -1,10 +1,10 @@
-import { AppProps } from "next/app";
+import { AppProps } from 'next/app';
 
 // Styling
-import "@styles/globals.css";
+import '@styles/globals.css';
 
-// Components
-import Layout from "@components/layout/Layout";
+// Parts
+import Layout from '@components/layout/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

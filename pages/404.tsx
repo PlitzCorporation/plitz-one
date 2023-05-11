@@ -1,17 +1,17 @@
-import Link from "next/link";
-import { Fragment } from "react";
+import Link from 'next/link';
+import { Fragment } from 'react';
 // Icons
-import { RiAlarmWarningFill } from "react-icons/ri";
+import { RiAlarmWarningFill } from 'react-icons/ri';
 
-import singlePage from "@styles/globalModules/singlePage.module.css";
+import singlePage from '@styles/globalModules/singlePage.module.css';
 
 // Components
-import Seo from "@components/Seo";
+import Seo from '@components/Seo';
 
 export default function NotFoundPage() {
   return (
     <Fragment>
-      <Seo templateTitle="Not Found" />
+      <Seo templateTitle='Not Found' />
 
       <section>
         <div className={singlePage.wrapperUnderConstruction}>
@@ -23,7 +23,7 @@ export default function NotFoundPage() {
             exists or has been removed.
           </p>
           <div className={singlePage.spButtonsWrapper}>
-            <Link href="/" className="secondary-button">
+            <Link href='/' className='secondary-button'>
               Back to Home
             </Link>
           </div>

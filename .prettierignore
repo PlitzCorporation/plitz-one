@@ -13,6 +13,9 @@
 # production
 /build
 
+__tests__
+/__tests__
+
 # misc
 .DS_Store
 *.pem

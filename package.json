@@ -55,18 +55,18 @@
   "lint-staged": {
     "components/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0",
-      "prettier -w"
+      "prettier -w ."
     ],
     "pages/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0",
-      "prettier -w"
+      "prettier -w ."
     ],
     "lib/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0",
-      "prettier -w"
+      "prettier -w ."
     ],
     "**/*.{json,css,scss,md,webmanifest,module.css}": [
-      "prettier -w"
+      "prettier -w ."
     ]
   }
 }
