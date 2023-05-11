@@ -164,6 +164,35 @@ span {
   transition: all 0.1s ease-in;
 }
 
+.shimmer-animation {
+  background: var(--plata);
+  animation: shimmer 1.3s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer: {
+  0% {
+    background-position: -700px 0;
+  }
+
+  100% {
+    background-position: 700px 0;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 3.8rem;

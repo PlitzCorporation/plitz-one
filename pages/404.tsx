@@ -8,7 +8,7 @@ import singlePage from '@styles/globalModules/singlePage.module.css';
 // Components
 import Seo from '@components/Seo';
 
-export default function NotFoundPage() {
+const NotFoundPage = () => {
   return (
     <Fragment>
       <Seo templateTitle='Not Found' />
@@ -31,4 +31,6 @@ export default function NotFoundPage() {
       </section>
     </Fragment>
   );
-}
+};
+
+export default NotFoundPage;
