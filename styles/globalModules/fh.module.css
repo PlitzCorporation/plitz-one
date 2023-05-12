@@ -45,6 +45,146 @@
   display: inline-block;
 }
 
+/* Mobile Navigation Styles */
+.togglerContainer {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-end;
+}
+
+.toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.toggleLineOne {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--plata);
+  transition: all 0.3s ease-out;
+}
+
+.toggleLineTwo {
+  display: block;
+  width: 65%;
+  height: 1px;
+  background-color: var(--plata);
+  transition: all 0.3s ease-out;
+}
+
+.toggleLineThree {
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: var(--plata);
+  transition: all 0.3s ease-out;
+}
+
+.toggler:hover .toggleLineOne,
+.toggler:hover .toggleLineTwo,
+.toggler:hover .toggleLineThree {
+  background-color: var(--accentgreen);
+  width: 100%;
+  transition: all 0.2s ease-in;
+}
+
+.mobileNavContainer {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.mobileOpen {
+  transform: translate(0);
+  transition: transform 0.4s ease-out;
+}
+
+.mobileClose {
+  transform: translate(100vw);
+  transition: transform 0.3s ease-in;
+}
+
+.mobileNavContainer nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(95% - 100px);
+  width: 70vw;
+  background-color: var(--secondary);
+  padding-top: 100px;
+  z-index: 1000;
+  box-shadow: none;
+  overflow-y: auto;
+  border-radius: 20px 0 0 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.closer {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1001;
+  top: 50px;
+  right: 20px;
+  padding: 0;
+  transition: all 0.4s ease-out;
+}
+
+.closer .closeLineOne {
+  position: absolute;
+  height: 1px;
+  background-color: var(--plata);
+  width: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.closer .closeLineTwo {
+  position: absolute;
+  height: 1px;
+  background-color: var(--plata);
+  width: 25px;
+  top: 50%;
+  right: -50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  ransition: all 0.3s ease-in;
+}
+
+.closer:hover {
+  transform: scale(1.1) rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  box-shadow: none;
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.navMobileItem {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
 /* Footer */
 .copyrightbar {
   display: flex;
@@ -53,6 +193,7 @@
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
+  font-size: 14px;
 }
 
 .crlink {

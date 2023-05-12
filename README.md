@@ -13,12 +13,12 @@ Repository Main Features:
 - Built with Next.JS 13
 - React 18
 - TypeScript
-- We are using CSS Modules and Material UI for styling
-- Import using `@componen/`, `@pages`, `@lib` and `@styles` prefix
+- We are using CSS Modules and Material UI for styling. If you master CSS then you can switch to Tailwind.
+- Import using `@componen`, `@pages`, `@lib` and `@styles` prefix
 - ESLint
 - Husky & Lint Staged
 - Github Actions
-- Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
+- Default Open Graph
 - Site Map — Automatically generate sitemap.xml
 
 ## Getting Started
@@ -69,8 +69,8 @@ This starter is using [conventional commits](https://www.conventionalcommits.org
 [optional footer(s)]
 ```
 
-check file `commitlint.config.js` and make sure you understand to use this CMC rules properly.
+Check file `commitlint.config.js` and make sure you understand it to use this CMC rules properly.
 
 ## Credits that we feature and we recommend your support
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
+Theodorus Clarence | TS + Next.js + Tailwind: [![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)

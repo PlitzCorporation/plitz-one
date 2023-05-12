@@ -7,13 +7,13 @@ const FooterController = () => {
   return (
     <footer>
       <div className={`${hfStyle.copyrightbar}`}>
-        © {new Date().getFullYear()} | Site created by
+        © {new Date().getFullYear()} | Created by
         <a
           href='https://plitzinc.com?ref=plitzone'
           target='_blank'
           className={hfStyle.crlink}
         >
-          Plitz7, a Plitz Corporation brand
+          Plitz Corporation
         </a>
       </div>
     </footer>
