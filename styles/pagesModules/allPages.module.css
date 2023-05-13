@@ -1,0 +1,11 @@
+.heroSection {
+  padding: 4rem 0;
+}
+
+.heroWrapper {
+  position: relative;
+}
+
+.heroWrapper h3 {
+  line-height: 1.1em;
+}

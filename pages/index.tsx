@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import { Fragment } from 'react';
 
 // Styling
@@ -6,34 +7,44 @@ import singlePage from '@styles/globalModules/singlePage.module.css';
 // Parts
 import Seo from '@components/Seo';
 
-const HomePage = () => {
+// TypeScript
+interface HomePageProps {
+  title: string;
+  subtitle: string;
+  pageContent: string;
+  buttons: ButtonTypes[];
+}
+
+interface ButtonTypes {
+  link: string;
+  label: string;
+  type: string;
+  external: boolean;
+}
+
+const HomePage = (props: HomePageProps) => {
   return (
     <Fragment>
       <Seo />
 
       <section>
         <div className={singlePage.wrapperUnderConstruction}>
-          <h1 className={singlePage.pageTitle}>
-            NEXT.js + TypeScript + Material UI Starting Pack
-          </h1>
-          <h2 className={singlePage.subTitle}>A Boilerplate by Plitz7</h2>
-          <p>
-            A starter for NEXT.js, Material UI, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky. This
-            boilerplate has been created by the Plitz7 team for your initial dev
-            convenience.
-          </p>
+          <h1 className={singlePage.pageTitle}>{props.title}</h1>
+          <h2 className={singlePage.subTitle}>{props.subtitle}</h2>
+          <p>{props.pageContent}</p>
           <div className={singlePage.spButtonsWrapper}>
-            <a className='primary-button' href='https://plitz7.com'>
-              Plitz7
-            </a>
-
-            <a
-              className='outlined-button'
-              href='https://github.com/PlitzCorporation'
-            >
-              GitHub Page
-            </a>
+            {props.buttons.map((button, index) => (
+              <a
+                key={index}
+                className={button.type}
+                href={button.link}
+                target={button.external ? '_blank' : undefined}
+                rel={button.external ? 'noopener noreferrer' : undefined}
+                role='link'
+              >
+                {button.label}
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -42,3 +53,32 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const data = {
+    title: 'NEXT.js + TypeScript + Material UI Starting Pack',
+    subtitle: 'A Boilerplate by Plitz7',
+    pageContent: `A starter for NEXT.js, Material UI, and TypeScript with Absolute
+    Import, Seo, Link component, pre-configured with Husky. This
+    boilerplate has been created by the Plitz7 team for your initial dev
+    convenience.`,
+    buttons: [
+      {
+        link: 'https://plitz7.com',
+        label: 'Hire Plitz7',
+        type: 'primary-button',
+        external: true,
+      },
+      {
+        link: 'https://github.com/PlitzCorporation',
+        label: 'GitHub Page',
+        type: 'outlined-button',
+        external: true,
+      },
+    ],
+  };
+
+  return {
+    props: data,
+  };
+};

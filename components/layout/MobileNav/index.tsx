@@ -38,11 +38,11 @@ const MobileNav = (props: MobileNavProps) => {
 
   return (
     <Fragment>
-      <div className={hfStyles.togglerContainer}>
-        <button className={hfStyles.toggler} onClick={onOpen}>
-          <div className={hfStyles.toggleLineOne}></div>
-          <div className={hfStyles.toggleLineTwo}></div>
-          <div className={hfStyles.toggleLineThree}></div>
+      <div className={hfStyles.openerContainer}>
+        <button className={hfStyles.opener} onClick={onOpen}>
+          <div className={hfStyles.openerLineOne}></div>
+          <div className={hfStyles.openerLineTwo}></div>
+          <div className={hfStyles.openerLineThree}></div>
         </button>
       </div>
 

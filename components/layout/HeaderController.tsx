@@ -16,7 +16,7 @@ import PlitzLogo from '~/svg/Plitz7.svg';
 // Navigation Structure
 const navigationLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about-plitz', label: 'About' },
+  { href: '/about-this-template', label: 'Read Me' },
 ];
 
 const HeaderController = () => {
