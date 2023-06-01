@@ -55,6 +55,8 @@ const HomePage = (props: HomePageProps) => {
 export default HomePage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  // You can replace this with an API call
+
   const data = {
     title: 'NEXT.js + TypeScript + Material UI Starting Pack',
     subtitle: 'A Boilerplate by Plitz7',

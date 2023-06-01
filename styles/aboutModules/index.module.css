@@ -1,0 +1,6 @@
+/* This styles are only for the About or Read me page */
+.blockContainer {
+  padding: 3rem 5rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+  border-radius: 40px;
+}

@@ -1,66 +1,49 @@
 import { GetServerSideProps } from 'next';
-import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 
-// Styling
-import singlePage from '@styles/globalModules/singlePage.module.css';
-import allPages from '@styles/pagesModules/allPages.module.css';
-
+import SectionOne from '@components/AboutComponents/SectionOne';
+import PagesTitling from '@components/layout/PagesTitling';
 // Parts
 import Seo from '@components/Seo';
 
 // TypeScript
-interface AboutTemplateProps {
+export interface AboutTemplateProps {
   title: string;
   subtitle: string;
   pageIntro: string;
   buttons: ButtonTypes[];
+  sectionOne: SectionOneProps;
 }
 
-interface ButtonTypes {
+export interface ButtonTypes {
   link: string;
   label: string;
   type: string;
   external: boolean;
 }
 
+export interface SectionOneProps {
+  header: string;
+  body: string;
+}
+
 const AboutTemplate = (props: AboutTemplateProps) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // This timeout is to show the loading skeleton effect only.
+    // You can use this for when the data change from the request
+    setTimeout(() => {
+      props.title && setLoading(false);
+    }, 500);
+  }, [props.title]);
+
   return (
     <Fragment>
       <Seo />
 
-      <section className={allPages.heroSection}>
-        <div className={allPages.heroWrapper}>
-          <h1 className={singlePage.pageTitle}>{props.title}</h1>
-          <h3 className={singlePage.subTitle}>{props.subtitle}</h3>
-          <p>{props.pageIntro}</p>
-          <div className={singlePage.spButtonsWrapper}>
-            {props.buttons.map((button, index) =>
-              button.external ? (
-                <a
-                  key={index}
-                  className={button.type}
-                  href={button.link}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  role='link'
-                >
-                  {button.label}
-                </a>
-              ) : (
-                <Link
-                  key={index}
-                  href={button.link}
-                  className={button.type}
-                  role='link'
-                >
-                  {button.label}
-                </Link>
-              )
-            )}
-          </div>
-        </div>
-      </section>
+      <PagesTitling {...props} loading={loading} />
+      <SectionOne {...props.sectionOne} />
     </Fragment>
   );
 };
@@ -68,10 +51,11 @@ const AboutTemplate = (props: AboutTemplateProps) => {
 export default AboutTemplate;
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  // You can replace this with an API call
   const data = {
     title: 'About This Template',
-    subtitle: 'Read about this template and why Plitz7 created it for you',
-    pageIntro: `Thanks for using this boilerplate for your projects. We are glad we can give you an easy wayt to start your new projects.`,
+    subtitle: 'An easey way to start developing with NEXT.js and TypeScript',
+    pageIntro: `Thanks for using this NEXT.js starter template. We are glad we can give you an easy way to start your new projects.`,
     buttons: [
       {
         link: 'https://plitz7.com',
@@ -86,6 +70,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
         external: false,
       },
     ],
+    sectionOne: {
+      header: 'Why NEXT.js and CSS',
+      body: '<p>Many developers are using Tailwind, but we have seen that many are using it without mastering CSS first, and this can be a major setback when complex styling are needed. If you feel like your knowledge of CSS is advanced already, you can choose to setup Tailwind instead, but we recommend you practice CSS with this template.</p><p>Connect with us using our social networks or github and leave a comment if you think you would prefer this template with a Tailwidn setup instead.</p>',
+    },
   };
 
   return {

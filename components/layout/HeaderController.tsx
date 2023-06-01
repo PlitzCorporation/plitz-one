@@ -1,10 +1,11 @@
 import { Grid } from '@mui/material';
 import Link from 'next/link';
-import * as React from 'react';
+import { useRouter } from 'next/router';
 
 // Style
 import hfStyles from '@styles/globalModules/fh.module.css';
 
+import clsxm from '@lib/clsxm';
 // Helpers
 import useDevice from '@lib/customHooks/useDevice';
 
@@ -21,6 +22,7 @@ const navigationLinks = [
 
 const HeaderController = () => {
   const currentDevice = useDevice();
+  const router = useRouter();
 
   return (
     <header className='headerClass'>
@@ -39,7 +41,11 @@ const HeaderController = () => {
                     <li key={index} className={hfStyles.navItem}>
                       <Link
                         href={navItem.href}
-                        className={hfStyles.navItemLink}
+                        className={clsxm(
+                          `${hfStyles.navItemLink}`,
+                          router.pathname === navItem.href &&
+                            `${hfStyles.currentPage}`
+                        )}
                       >
                         {navItem.label}
                       </Link>
